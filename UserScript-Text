@@ -1,0 +1,24 @@
+// ==UserScript==
+// @name         STUHD-Text
+// @namespace    https://stuniverse.de/colony.php?SHOW*
+// @namespace    https://stuniverse.de/pm.php?*
+// @namespace    https://stuniverse.de/research.php*
+// @namespace    https://stuniverse.de/trade.php*
+// @version      0.1
+// @description  enter something useful
+// @author       DC3609
+// @match        https://stuniverse.de/colony.php?SHOW*
+// @match        https://stuniverse.de/pm.php?*
+// @match        https://stuniverse.de/research.php*
+// @match        https://stuniverse.de/trade.php*
+// @grant        none
+// ==/UserScript==
+
+
+
+(function() {
+    'use strict';
+    document.documentElement.innerHTML=document.documentElement.innerHTML.replace(/Nahrung/g,"test");
+    setInterval(function() {
+         document.documentElement.innerHTML=document.documentElement.innerHTML.replace(/Nahrung/g,"test");
+})();
