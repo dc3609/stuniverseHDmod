@@ -1,0 +1,52 @@
+// ==UserScript==
+// @name         STUHD
+// @namespace    https://stuniverse.de/colony.php?SHOW*
+// @namespace    https://stuniverse.de/pm.php?*
+// @namespace    https://stuniverse.de/research.php*
+// @namespace    https://stuniverse.de/trade.php*
+// @version      0.1
+// @description  enter something useful
+// @author       DC3609
+// @match        https://stuniverse.de/colony.php?SHOW*
+// @match        https://stuniverse.de/pm.php?*
+// @match        https://stuniverse.de/research.php*
+// @match        https://stuniverse.de/trade.php*
+// @grant        none
+// ==/UserScript==
+
+
+
+window.addEventListener('load', function() {
+var images = document.getElementsByTagName('img');
+for (var i = 0; i < images.length; i++) {
+images[i].src = images[i].src.replace('https://stuniverse.de/assets/goods/1.gif', 'https://i.ibb.co/0JBxjFw/1.png');
+images[i].src = images[i].src.replace('https://stuniverse.de/assets/generated/buildings/21010100/0at.png', 'https://i.ibb.co/K2Ts3QN/0at.png');
+images[i].src = images[i].src.replace('https://stuniverse.de/assets/generated/buildings/21010100/0an.png', 'https://i.ibb.co/Sy1tBjQ/0an.png');
+images[i].src = images[i].src.replace('https://stuniverse.de/assets/generated/buildings/21020100/0at.png', 'https://i.ibb.co/z7dm0nQ/0at.png');
+images[i].src = images[i].src.replace('https://stuniverse.de/assets/generated/buildings/21020100/0an.png', 'https://i.ibb.co/FHNR6Qk/0an.png');
+}
+}, false);
+
+setInterval(function() {
+var images = document.getElementsByTagName('img');
+for (var i = 0; i < images.length; i++) {
+images[i].src = images[i].src.replace('https://stuniverse.de/assets/goods/1.gif', 'https://i.ibb.co/0JBxjFw/1.png');
+images[i].src = images[i].src.replace('https://stuniverse.de/assets/generated/buildings/21010100/0at.png', 'https://i.ibb.co/K2Ts3QN/0at.png');
+images[i].src = images[i].src.replace('https://stuniverse.de/assets/generated/buildings/21010100/0an.png', 'https://i.ibb.co/Sy1tBjQ/0an.png');
+images[i].src = images[i].src.replace('https://stuniverse.de/assets/generated/buildings/21020100/0at.png', 'https://i.ibb.co/z7dm0nQ/0at.png');
+images[i].src = images[i].src.replace('https://stuniverse.de/assets/generated/buildings/21020100/0an.png', 'https://i.ibb.co/FHNR6Qk/0an.png');
+}
+}, 30000);
+
+
+(function() {
+    'use strict';
+    document.documentElement.innerHTML=document.documentElement.innerHTML.replace(/Nahrung/g,"Hanf");
+    document.documentElement.innerHTML=document.documentElement.innerHTML.replace(/Farm/g,"Hanfplantage");
+    document.documentElement.innerHTML=document.documentElement.innerHTML.replace(/Algenfarm/g,"Hydrokultur Hanf");
+    setInterval(function() {
+         document.documentElement.innerHTML=document.documentElement.innerHTML.replace(/Nahrung/g,"Hanf");
+         document.documentElement.innerHTML=document.documentElement.innerHTML.replace(/Farm/g,"Hanfplantage");
+    document.documentElement.innerHTML=document.documentElement.innerHTML.replace(/Algenfarm/g,"Hydrokultur Hanf");
+    }, 30000);
+})();
